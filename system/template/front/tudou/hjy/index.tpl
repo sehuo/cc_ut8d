@@ -6,7 +6,7 @@
 {include file="header_append.tpl"}
 <div class="panel panel-default">
     <div class="panel-heading">推荐赛事  <a href="{poc_url url=video/show/order/6}" class="badge">更多</a></div>
-    <div class="panel-body">
+    <div class="panel-body container-fluid">
         <!--{poc_load_data action=video fields=pic,videolink,title output=videos infonum=4 order=6 titlelen=35}-->
         <!--{foreach from=$videos key=key item=video}-->
             <!--{if $key%2 == 0}-->
@@ -34,7 +34,7 @@
 
 <div class="panel panel-default">
     <div class="panel-heading">最新赛事  <a href="{poc_url url=video/showorder/2}" class="badge">更多</a></div>
-    <div class="panel-body">
+    <div class="panel-body container-fluid">
         <!--{poc_load_data action=video fields=pic,videolink,title output=videos infonum=4 order=2 titlelen=35}-->
         <!--{foreach from=$videos key=key item=video}-->
             <!--{if $key%2 == 0}-->
@@ -60,7 +60,7 @@
 
 <div class="panel panel-default">
     <div class="panel-heading">专辑推荐 <a href="{poc_url url=playlist/index}">更多</a></div>
-    <div class="panel-body">
+    <div class="panel-body container-fluid">
         <!-- 推荐专辑 -->
         <!--{poc_load_data action=playlist output=playlists infonum=4 order=5 desclen=100 titlelen=100 elite=5}-->
         <!--{foreach from=$playlists key=key item=playlist}-->

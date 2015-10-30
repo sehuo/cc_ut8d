@@ -32,20 +32,21 @@
     </div>
 </div>
 
-<div class="panel panel-default hidden videoSrcs" id="J-videoSrcs">
-    <div class="panel-heading">
-        <h3 class="panel-title">播放异常、无法观看？切换视频试试</h3>
-    </div>
-    <div class="panel-body">
-        <div class="list-group">
-        </div>
-    </div>
-</div>
-
 
 <div class="panel panel-default hidden" id="J-videoPlayList">
     <div class="panel-heading">
         <h3 class="panel-title">播放列表</h3>
+    </div>
+    <div class="panel-body">
+        <div class="list-group">
+            <div id="cike_plug_playlist"></div>
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default hidden videoSrcs" id="J-videoSrcs">
+    <div class="panel-heading">
+        <h3 class="panel-title">播放异常、无法观看？切换视频试试</h3>
     </div>
     <div class="panel-body">
         <div class="list-group">

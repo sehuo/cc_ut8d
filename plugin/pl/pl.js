@@ -53,8 +53,7 @@ $(function() {
         playList:function(data){
             var playlistDOM = $("#cike_plug_playlist");
             var step = cike_config.playListStep; 
-            if(playlistDOM[0] && data.list.length){                
-                
+            if(playlistDOM[0] && data.list.length){
                 var str = [];
                 var playing = "";
                 var indexof = -1;
@@ -76,17 +75,13 @@ $(function() {
                     }
                     str.push('<li'+playing+'><a href="'+vlink+'">'+ data.list[j]["title"] +'</a></li>');
                 }
-                
-                
                 //html.push('<ul class="rc fix">'+ str.join("") +'</ul>');
                 //playlistDOM.show().html(html.join('<div class="plug_otherPlays">本视频也在下面专辑中</div>'));
                 playlistDOM.show().html('<ul class="rc fix">'+ str.join("") +'</ul><div class="cike_page"><div class="cike_pagemain">'+data.page+'</div></div>');
-                
             }
 
 
             if(!playlistDOM.data("hasEvent")){
-            
                 playlistDOM.bind("click",function(e){
                     var target = $(e.target);
                     if(target.hasClass("J_pagea")){
@@ -95,10 +90,8 @@ $(function() {
                         cike_event.get({"urlparam":url,"type":"playList"})
                     }
                 });
-
                 playlistDOM.data("hasEvent",1);
             }
-
         },
         playUrls:function(data){
             var urls = data.split("#CK#");

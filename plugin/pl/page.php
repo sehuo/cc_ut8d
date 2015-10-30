@@ -96,7 +96,7 @@ class SubPages{
 		for($i=0;$i<count($a);$i++){  
 			$s=$a[$i];  
 			if($s == $this->current_page ){  
-				$subPageCss2Str.="<span>".$s."</span>";  
+				$subPageCss2Str.="<span class='currentpage'>".$s."</span>";  
 			}else{  
 				$url=$this->subPage_link."#".$s;  
 				$subPageCss2Str.="<a data-url='".$this->subPage_link."&p=".$s."' href='#' class='J_pagea'>".$s."</a>";  

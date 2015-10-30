@@ -22,6 +22,7 @@ $(function($) {
             dataType: 'jsonp',
             success:function(data){
                 data.videoSrcs = getVideoListArray(data.playUrls);
+                // data.playList = data.playList;
                 callback(data);
             }
         });
@@ -38,6 +39,46 @@ $(function($) {
         }
         return arr;
     }
+
+    var rendPlayList = function(data){
+        var playlistDOM = $("#cike_plug_playlist");
+        if(!playlistDOM[0] || !data.list.length){return;}
+        
+        var str = [];
+        var lens = data.list.length;
+        var pageAllNum = Math.ceil(lens/videoListStep);
+        var pageCur = 0;
+        for(var j=0,k=lens;j<k;j++){
+            var playingStr = "", itemClsStr = 'list-group-item', vlink;
+            if(data.list[j]["vid"] == vid){
+                playingStr = ' <span class="badge">正在播放</span></a>';
+                itemClsStr += ' active';
+            }
+            if(typeof series != "undefined" && series){
+                vlink = site_url+'video/index/'+data.list[j]["vid"]+'/series/1/plid/'+plid;
+            }else{
+                vlink = site_url+'video/index/'+data.list[j]["vid"];
+            }
+            str.push('<a href="'+ vlink +'" class="'+ itemClsStr +'">'+ data.list[j]["title"] + playingStr + '</a>')
+        }
+        
+        $('#J-videoPlayList').removeClass('hidden');
+
+        playlistDOM.html(str.join("") +'<div class="pagination">'+ data.page +'</div>');
+   
+        if(!playlistDOM.data("hasEvent")){
+            playlistDOM.bind("click",function(e){
+                var target = $(e.target);
+                if(target.hasClass("J_pagea")){
+                    e.preventDefault();
+                    var url = target.attr("data-url");
+                    getVideoListData({"urlparam":url, "type":"playList"}, render);
+                }
+            });
+            playlistDOM.data("hasEvent",1);
+        }
+    }
+
     var rendVideoList = function(videoSrcs){
         if(videoSrcs.length){
             var html = [];
@@ -52,7 +93,8 @@ $(function($) {
             }).find('.list-group-item').eq(0).click();
         }
     }
-    var videoPlay = function videoPlay(url){
+
+    var videoPlay = function(url){
         if(url.indexOf('tudou.com')>0){
             if(xx=url.match(/\/programs\/view\/([a-zA-Z0-9_\-]*)/)){
                 yid=xx[1];
@@ -123,14 +165,11 @@ $(function($) {
         }
     }
 
-    getVideoListData({type:"play"}, function(data){
+    var render = function (data) {
         rendVideoList(data.videoSrcs);
-    });
+        rendPlayList(data.playList);
+    }
 
-    // 统计视频点击
-    setTimeout(function(){
-        if(typeof misc_statistic_update == "undefined" || misc_statistic_update != '1') {
-            $.getJSON(base_dir + "index.php?r=ajax/count_view/video/" + vid);
-        } 
-     },3000);
+    getVideoListData({type:"play"}, render);
+
 });
