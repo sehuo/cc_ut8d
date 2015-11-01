@@ -12,13 +12,6 @@
         <a class="navbar-brand" href="{$base_url}">狂野角斗士</a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
-        <form class="navbar-form" role="search" action="{$front_url}search" method="post">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search" name="keyword">
-            <input name="key" value="title" type="hidden"/>
-          </div>
-          <button type="submit" class="btn btn-success">搜索</button>
-        </form>
         <ul class="nav navbar-nav">
           <li><a href="/wwe/playdc/">单场</a></li>
           <li><a href="/wwe/playzw/">解说</a></li>
@@ -57,5 +50,20 @@
       <li{if in_array($current_act, array('special/index'))} class="active"{/if}><a href="{poc_url url=special/index}">专题</a></li>
     </ul>
   </div>
-
+  <div class="container search">
+    <div class="row">
+      <div class="col-xs-12">
+        <form action="{$front_url}search" method="post">
+          <div class="input-group">
+            <input name="key" value="title" type="hidden"/>
+            <input type="text" class="form-control" name="keyword" placeholder="输入视频标题" value="{$search_keyword}">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="submit">搜索</button>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+    </form>
+  </div>
     

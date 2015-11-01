@@ -21,7 +21,7 @@
         <div class="panel-heading">
             <h3 class="panel-title">视频</h3>
         </div>
-        <div class="panel-body">
+        <div class="panel-body container-fluid">
             <!--{foreach from=$videos key=key item=video}-->
                 <!--{if $key%2 == 0}-->
                     <div class="row">
@@ -53,7 +53,7 @@
         <div class="panel-heading">
             <h3 class="panel-title">专辑</h3>
         </div>
-        <div class="panel-body">
+        <div class="panel-body container-fluid">
             <!--{foreach from=$playlists item=playlist}-->
                 <!--{if $key%2 == 0}-->
                     <div class="row">
@@ -78,7 +78,6 @@
         </div>
     </div>
  <!--{/if}-->
-   
 
 <script type="text/javascript">
 if (typeof misc_statistic_update == "undefined" || misc_statistic_update != '1') {

@@ -30,11 +30,10 @@ $(function($) {
     var getVideoListArray = function(playUrls){
         var urls = playUrls ? playUrls.split("#CK#") : [];
         var arr = [];
-        urls.unshift(video_info.addr + '@' + video_info.title);
         for(var i=0;i<urls.length;i++){
             var url = urls[i].split("@");
             // var title = url.length > 1 ? url[1]:(i+1);
-            var title = url.length > 1 ? url[1]: '其他';
+            var title = url.length > 1 ? url[1]: '默认播放源';
             arr.push({'title' :title, 'link':url[0]});
         }
         return arr;
@@ -80,7 +79,7 @@ $(function($) {
     }
 
     var rendVideoList = function(videoSrcs){
-        if(videoSrcs.length > 1){
+        if(videoSrcs.length){
             var html = [];
             videoSrcs.forEach(function(video){
                 html.push('<a href="'+ video.link +'" class="list-group-item">'+ video.title +'<span class="badge">正在播放</span></a>');

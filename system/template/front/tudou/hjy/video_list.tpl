@@ -41,7 +41,7 @@
 </div>
 
 <nav class="text-center">
-    <div class="pagination">
+    <div class="pagination pages">
         {$multipage}
     </div>
 </nav>

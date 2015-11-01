@@ -22,7 +22,7 @@
                     {$playlist.pic|thumbnail_render}
                 </a>
                 <div class="caption">
-                    <p>{$playlist.stitle}<span class="badge">{$playlist.videocount}</span></p>
+                    <p><a href="{poc_url url=playlist/view/`$playlist.plid`}">{$playlist.stitle}</a></p>
                 </div>
             </div>
         </div>
@@ -36,7 +36,7 @@
 </div>
 
 <nav class="text-center">
-    <div class="pagination">
+    <div class="pagination pages">
         {$multipage}
     </div>
 </nav>

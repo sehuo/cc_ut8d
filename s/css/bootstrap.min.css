@@ -707,11 +707,10 @@ a.badge:focus{color:#fff;text-decoration:none;cursor:pointer}
 .list-group-item>.badge{float:right}
 .list-group-item>.badge+.badge{margin-right:5px}
 .nav-pills>li>a>.badge{margin-left:3px}
-.thumbnail{position:relative; display:block;margin-bottom:20px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;}
+.thumbnail{position:relative; display:block;margin-bottom:20px;line-height:1.42857143;background-color:#fff;}
 .thumbnail a>img,.thumbnail>img{margin-left:auto;margin-right:auto}
 a.thumbnail.active,a.thumbnail:focus{border-color:#337ab7}
-.thumbnail .caption{padding-left:.4em;color:#fff;position:absolute;bottom:0;left:0;width:100%;background-color:rgb(120,120,120);background-color:rgba(0,0,0,0.5);}
-.thumbnail .caption a{color:#fff;}
+.thumbnail .caption{padding-left:.4em;color:#fff;width:100%;}
 .media{margin-top:15px}
 .media:first-child{margin-top:0}
 .media,.media-body{zoom:1;overflow:hidden}
@@ -871,7 +870,7 @@ td.visible-xs,th.visible-xs{display:table-cell!important}
 
 /*==========!bootstra==========*/
 .c-navbar-top{margin-bottom:0;}
-.c-main-nav{background-color:#286090;margin-bottom:20px;}
+.c-main-nav{background-color:#286090;}
 .c-main-nav a{color:#fff}
 .c-main-nav li>a:focus{text-decoration:none;background-color:#337AB7}
 
@@ -879,4 +878,14 @@ td.visible-xs,th.visible-xs{display:table-cell!important}
 
 .thumbnail .caption a{font-size:12px;}
 
-.c-subnav-tab{margin-bottom:20px;margin-top:-20px;}
+.c-subnav-tab{margin-bottom:20px;}
+
+.pages .otherpage,
+.pages .currentpage{display:none;}
+.pages .prepage{margin-left:0;border-bottom-left-radius:4px;border-top-left-radius:4px}
+.pages .nextpage{border-bottom-right-radius:4px;border-top-right-radius:4px}
+
+.pages .prepage:after{content:'上一页';}
+.pages .nextpage:before{content:'下一页';}
+
+.search{padding-top:10px; padding-bottom:10px;}

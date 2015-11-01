@@ -6,7 +6,7 @@
 {include file="header_append.tpl"}
 
 <div class="container-fluid">
-    <!--{poc_load_data action=special fields=name,sid,pic,videocount output=specials,multipage infonum=15 order=2 page=1}-->
+    <!--{poc_load_data action=special fields=name,sid,pic,videocount output=specials,multipage infonum=10 order=2 page=1}-->
     <!--{foreach from=$specials key=key item=special}-->
         <!--{if $key%2 == 0}-->
             <div class="row">
@@ -31,7 +31,7 @@
 </div>    
                        
 <nav class="text-center">
-    <div class="pagination">
+    <div class="pagination pages">
         {$multipage}
     </div>
 </nav>
