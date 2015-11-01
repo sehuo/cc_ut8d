@@ -64,5 +64,5 @@
     </div>
 </div>
                 
-<script src="/s/js/video.js"></script>
+<script src="/s/js/video.js?t=20151101"></script>
 {include file="footer.tpl"}

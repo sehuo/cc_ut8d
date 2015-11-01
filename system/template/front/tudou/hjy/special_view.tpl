@@ -15,7 +15,7 @@
     </div>
 </div>
 
-<!--{poc_special fields=title,date,videolink,pic,date,duration,uid,username id=$sid order=2 type=video group=default output=videos}-->
+<!--{poc_special fields=title,date,videolink,pic,date,duration id=$sid order=2 type=video group=default output=videos cache=40}-->
 <!--{if $videos}-->
     <div class="panel panel-default">
         <div class="panel-heading">
@@ -47,14 +47,14 @@
     </div> 
 <!--{/if}-->
 
-<!--{poc_special fields=title,date,pic,viewcount,uid,username id=$sid order=3 type=playlist group=default output=playlists}-->
+<!--{poc_special fields=title,date,pic,viewcount id=$sid order=2 type=playlist group=default output=playlists cache=40}-->
 <!--{if $playlists}-->
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 class="panel-title">专辑</h3>
         </div>
         <div class="panel-body container-fluid">
-            <!--{foreach from=$playlists item=playlist}-->
+            <!--{foreach from=$playlists key=key item=playlist}-->
                 <!--{if $key%2 == 0}-->
                     <div class="row">
                 <!--{/if}-->
@@ -78,10 +78,4 @@
         </div>
     </div>
  <!--{/if}-->
-
-<script type="text/javascript">
-if (typeof misc_statistic_update == "undefined" || misc_statistic_update != '1') {
-    $.getJSON(base_dir + "index.php?r=ajax/count_view/special/{$sid}", function(result){});
-}
-</script>
 {include file="footer.tpl"}
