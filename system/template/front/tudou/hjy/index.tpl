@@ -4,10 +4,10 @@
 <meta name="description" content="{$site_description}" />
 {include file="header_prepend.tpl"}
 {include file="header_append.tpl"}
-<div class="panel panel-default">
-    <div class="panel-heading">推荐赛事  <a href="{poc_url url=video/show/order/6}" class="badge">更多</a></div>
+<div class="panel panel-info">
+    <div class="panel-heading">推荐赛事  <a href="{poc_url url=video/show/order/6}" class="badge pull-right">更多</a></div>
     <div class="panel-body container-fluid">
-        <!--{poc_load_data action=video fields=pic,videolink,title output=videos infonum=4 order=6 titlelen=35}-->
+        <!--{poc_load_data action=video fields=pic,videolink,title output=videos infonum=4 order=6 titlelen=48 cache=40}-->
         <!--{foreach from=$videos key=key item=video}-->
             <!--{if $key%2 == 0}-->
                 <div class="row">
@@ -32,10 +32,10 @@
     </div>
 </div>
 
-<div class="panel panel-default">
-    <div class="panel-heading">最新赛事  <a href="{poc_url url=video/showorder/2}" class="badge">更多</a></div>
+<div class="panel panel-info">
+    <div class="panel-heading">最新赛事  <a href="{poc_url url=video/showorder/2}" class="badge pull-right">更多</a></div>
     <div class="panel-body container-fluid">
-        <!--{poc_load_data action=video fields=pic,videolink,title output=videos infonum=4 order=2 titlelen=35}-->
+        <!--{poc_load_data action=video fields=pic,videolink,title output=videos infonum=4 order=2 titlelen=48 cache=40}-->
         <!--{foreach from=$videos key=key item=video}-->
             <!--{if $key%2 == 0}-->
                 <div class="row">
@@ -58,23 +58,16 @@
     </div>
 </div>
 
-<div class="panel panel-default">
-    <div class="panel-heading">专辑推荐 <a href="{poc_url url=playlist/index}">更多</a></div>
-    <div class="panel-body container-fluid">
+<div class="panel panel-info">
+    <div class="panel-heading">专辑推荐 <a href="{poc_url url=playlist/index}" class="badge pull-right">更多</a></div>
+    <div class="panel-body">
         <!-- 推荐专辑 -->
-        <!--{poc_load_data action=playlist output=playlists infonum=4 order=5 desclen=100 titlelen=100 elite=5}-->
+        <!--{poc_load_data action=playlist output=playlists infonum=4 order=5 desclen=100 titlelen=70 elite=5 cache=40}-->
         <!--{foreach from=$playlists key=key item=playlist}-->
-        <div class="row">
-            <div class="col-xs-4">
-                <a href="{poc_url url=playlist/view/`$playlist.plid`}">
-                    {$playlist.pic|thumbnail_render}
-                </a>
-            </div>
-            <div class="col-xs-8">
-                <h4><a href="{poc_url url=playlist/view/`$playlist.plid`}">{$playlist.title}</a></h4>
-                {$playlist.sdes}
-            </div>
-        </div>
+        <a href="{poc_url url=playlist/view/`$playlist.plid`}" class="list-group-item">
+            <h5 class="list-group-item-heading">{$playlist.stitle}</h5>
+            <p class="list-group-item-text">{$playlist.sdes}</p>
+        </a>
         <!--{/foreach}-->
     </div>
 </div>

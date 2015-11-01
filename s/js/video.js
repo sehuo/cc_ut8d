@@ -80,12 +80,12 @@ $(function($) {
     }
 
     var rendVideoList = function(videoSrcs){
-        if(videoSrcs.length){
+        if(videoSrcs.length > 1){
             var html = [];
             videoSrcs.forEach(function(video){
                 html.push('<a href="'+ video.link +'" class="list-group-item">'+ video.title +'<span class="badge">正在播放</span></a>');
             });
-            $('#J-videoSrcs').removeClass('hidden').find('.list-group').append(html.join('')).on('click', '.list-group-item', function(e){
+            $('#J-videoSrcs').removeClass('hidden').find('.list-group').html(html.join('')).on('click', '.list-group-item', function(e){
                 e.preventDefault();
                 $(this).parent().find('.active').removeClass('active');
                 $(this).addClass('active');

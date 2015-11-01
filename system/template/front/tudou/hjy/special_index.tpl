@@ -4,7 +4,8 @@
 <meta name="description" content="WWE狂野角斗士-WWE美国职业摔角-为广大摔迷朋友提供WWF历年经典比赛、铁笼赛、梯子赛、硬核赛、强弱不等赛、皇家大战、摔角狂热等专题。" />
 {include file="header_prepend.tpl"}
 {include file="header_append.tpl"}
-<div class="container">
+
+<div class="container-fluid">
     <!--{poc_load_data action=special fields=name,sid,pic,videocount output=specials,multipage infonum=15 order=2 page=1}-->
     <!--{foreach from=$specials key=key item=special}-->
         <!--{if $key%2 == 0}-->
@@ -27,11 +28,12 @@
     <!--{if $key%2 == 0}-->
         </div >
     <!--{/if}-->
-                           
-    <nav class="text-center">
-        <div class="pagination">
-            {$multipage}
-        </div>
-    </nav>
-</div>
+</div>    
+                       
+<nav class="text-center">
+    <div class="pagination">
+        {$multipage}
+    </div>
+</nav>
+
 {include file="footer.tpl"}

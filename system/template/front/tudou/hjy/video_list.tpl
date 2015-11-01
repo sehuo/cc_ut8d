@@ -5,38 +5,41 @@
 {include file="header_prepend.tpl"}
 {include file="header_append.tpl"}
 
-<ul class="nav nav-tabs nav-justified">
+<ul class="nav nav-tabs nav-justified c-subnav-tab">
     <li {if $order == 2} class="active"{/if}><a href="{poc_url url=video/show/cid/`$cid`/order/2}">发布时间</a></li>
     <li {if $order == 3} class="active"{/if}><a href="{poc_url url=video/show/cid/`$cid`/order/3}">按热度</a></li>
     <li {if $order == 6} class="active"{/if}><a href="{poc_url url=video/show/cid/`$cid`/order/6}">按推荐</a></li>
 </ul>
-       
-<!--{if $cid == 0}-->
-    <!--{poc_load_data action=video output=videos,multipage infonum=15 page=1 titlelen=100 order=$order}-->
-<!--{else}-->
-    <!--{poc_load_data action=video output=videos,multipage infonum=15 type=channel id=$cid page=1 titlelen=100 order=$order}-->
-<!--{/if}-->
-<!--{foreach from=$videos key=key item=video}-->
-    <!--{if $key%2 == 0}-->
-        <div class="row">
+
+<div class="container-fluid">
+    <!--{if $cid == 0}-->
+        <!--{poc_load_data action=video output=videos,multipage infonum=10 page=1 titlelen=48 order=$order cache=40}-->
+    <!--{else}-->
+        <!--{poc_load_data action=video output=videos,multipage infonum=10 type=channel id=$cid page=1 titlelen=48 order=$order cache=40}-->
     <!--{/if}-->
-    <div class="col-xs-6">
-        <div class="thumbnail">
-            <a href="{$video.videolink}">
-                {$video.pic|thumbnail_render}
-            </a>
-            <div class="caption">
-                <p><a href="{$video.videolink}">{$video.stitle}</a></p>
+    <!--{foreach from=$videos key=key item=video}-->
+        <!--{if $key%2 == 0}-->
+            <div class="row">
+        <!--{/if}-->
+        <div class="col-xs-6">
+            <div class="thumbnail">
+                <a href="{$video.videolink}">
+                    {$video.pic|thumbnail_render}
+                </a>
+                <div class="caption">
+                    <p><a href="{$video.videolink}">{$video.stitle}</a></p>
+                </div>
             </div>
         </div>
-    </div>
-    <!--{if $key%2 == 1}-->
+        <!--{if $key%2 == 1}-->
+            </div >
+        <!--{/if}--> 
+    <!--{/foreach}-->
+    <!--{if $key%2 == 0}-->
         </div >
     <!--{/if}-->
-<!--{/foreach}-->
-<!--{if $key%2 == 0}-->
-    </div >
-<!--{/if}-->
+</div>
+
 <nav class="text-center">
     <div class="pagination">
         {$multipage}
