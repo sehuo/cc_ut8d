@@ -1,4 +1,4 @@
-</head>
+﻿</head>
 <body>
   <nav class="navbar navbar-default navbar-static-top c-navbar-top">
     <div class="container-fluid">
@@ -13,22 +13,16 @@
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li><a href="/wwe/playdc/">单场</a></li>
-          <li><a href="/wwe/playzw/">解说</a></li>
-          <li><a href="/wwe/playgy/">国语</a></li>
-          <li><a href="/wwe/playpy/">配音</a></li>
-          <li><a href="/wwe/ppv/">PPV</a></li>
-          <li><a href="/wwe/raw/">RAW</a></li>
-          <li><a href="/wwe/sd/">SD</a></li>
-          <li><a href="/wwe/nxt/">NXT</a></li>
-          <li><a href="/wwe/me/">ME</a></li>
-          <li><a href="/wwe/sms/">SMS</a></li>
-          <li><a href="/wwe/ss/">SS</a></li>
-          <li><a href="/wwe/ecw/">ECW</a></li>
-          <li><a href="/wwe/tna/">TNA</a></li>
-          <li><a href="/wwe/sexy/">女摔</a></li>
-          <li><a href="/wwe/jd/">经典</a></li>
-          <li><a href="/wwe/playKill/">招式</a></li>
+          <li><a href="{poc_url url=special/view/11}">选手专区</a></li>
+          <li><a href="{poc_url url=playlist/view/2255}">21-1特辑</a></li>
+          <li><a href="{poc_url url=playlist/view/2242}">每周集锦</a></li>
+          <li><a href="{poc_url url=special/view/26}">中文解说</a></li>
+          <li><a href="{poc_url url=playlist/view/2239}">TOP排行</a></li>
+          <li><a href="{poc_url url=playlist/view/2240}">台前幕后</a></li>
+          <li><a href="{poc_url url=playlist/view/2237}">出场音乐</a></li>
+          <li><a href="{poc_url url=playlist/view/2222}">终结招式</a></li> 
+          <li><a href="{poc_url url=playlist/view/2221}">女子撕衣</a></li>
+          <li><a href="{poc_url url=playlist/view/2225}">每日经典</a></li>
           <li role="separator" class="divider"></li>
           <li><a href="{poc_url url=search/tagid/3506}">摔角狂热2015</a></li>
           <li><a href="{poc_url url=search/tagid/3565}">血债血偿2015</a></li>
@@ -37,7 +31,6 @@
           <li><a href="{poc_url url=search/tagid/3634}">决战之地2015</a></li>
           <li><a href="{poc_url url=search/tagid/3674}">夏日狂潮2015</a></li>
           <li role="separator" class="divider"></li>
-          <li><a href="/wwe/playmrjd/">其他</a></li>
         </ul>
       </div>
     </div>

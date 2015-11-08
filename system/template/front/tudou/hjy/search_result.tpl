@@ -1,4 +1,4 @@
-{include file="header_preprepend.tpl"}
+﻿{include file="header_preprepend.tpl"}
 <title>{poc_lang key=search}{$search_keyword}{poc_lang key=related}{if in_array($search_type, array('tagname', 'tagid'))}
 {poc_lang key=tag}{elseif $search_type == 'playlist'}{poc_lang key=playlist}{else}{poc_lang key=video}{/if} - WWE狂野角斗士</title>
 <meta name="Keywords" content="{$search_keyword}最新赛事,{$search_keyword}最新视频,{$search_keyword}全部视频,{$search_keyword}专辑,{$search_keyword}全集在线播放,{$search_keyword}高清在线观看" />
@@ -9,9 +9,9 @@
     <h4><em class="text-danger">{$search_keyword}</em>相关视频</h4>
     <!--{if in_array($search_type, array('title', 'tagname', 'tagid', 'user_video'))}-->
         <!--{if $search_type == 'tagid'}-->
-            <!--{poc_load_data action=video fields=vid,uid,username,title,viewcount,date,pic,videolink type=tag id=$tagid output=videos,multipage order=$orderby infonum=10 page=1 titlelen=50 cache=40}-->
+            <!--{poc_load_data action=video fields=vid,uid,username,title,viewcount,date,pic,videolink type=tag id=$tagid output=videos,multipage order=$orderby infonum=10 page=1 titlelen=200 cache=40}-->
         <!--{else}-->
-            <!--{poc_load_data action=video fields=vid,uid,username,title,viewcount,date,pic,videolink id=$ids output=videos,multipage order=$orderby infonum=10 page=1 titlelen=50 cache=40}-->
+            <!--{poc_load_data action=video fields=vid,uid,username,title,viewcount,date,pic,videolink id=$ids output=videos,multipage order=$orderby infonum=10 page=1 titlelen=200 cache=40}-->
         <!--{/if}-->
         
         <!--{foreach from=$videos key=key item=video}-->
@@ -36,7 +36,7 @@
             </div >
         <!--{/if}-->
     <!--{else}-->
-        <!--{poc_load_data action=playlist fields=plid,title,uid,username,pic,date,viewcount id=$ids output=playlists,multipage order=$orderby infonum=15 page=1 titlelen=100 cache=0}-->
+        <!--{poc_load_data action=playlist fields=plid,title,uid,username,pic,date,viewcount id=$ids output=playlists,multipage order=$orderby infonum=15 page=1 titlelen=200 cache=0}-->
         <!--{foreach from=$playlists key=key item=playlist}-->
             <!--{if $key%2 == 0}-->
                 <div class="row">

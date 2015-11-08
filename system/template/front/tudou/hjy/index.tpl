@@ -1,4 +1,4 @@
-{include file="header_preprepend.tpl"}
+﻿{include file="header_preprepend.tpl"}
 <title>{$site_name}</title>
 <meta name="Keywords" content="{$site_keyword}" />
 <meta name="description" content="{$site_description}" />
@@ -7,7 +7,7 @@
 <div class="panel panel-info">
     <div class="panel-heading">推荐赛事  <a href="{poc_url url=video/show/order/6}" class="badge pull-right">更多</a></div>
     <div class="panel-body container-fluid">
-        <!--{poc_load_data action=video fields=pic,videolink,title output=videos infonum=4 order=6 titlelen=48 cache=40}-->
+        <!--{poc_load_data action=video fields=pic,videolink,title output=videos infonum=6 order=6 titlelen=100 cache=40}-->
         <!--{foreach from=$videos key=key item=video}-->
             <!--{if $key%2 == 0}-->
                 <div class="row">
@@ -35,7 +35,7 @@
 <div class="panel panel-info">
     <div class="panel-heading">最新赛事  <a href="{poc_url url=video/showorder/2}" class="badge pull-right">更多</a></div>
     <div class="panel-body container-fluid">
-        <!--{poc_load_data action=video fields=pic,videolink,title output=videos infonum=4 order=2 titlelen=48 cache=40}-->
+        <!--{poc_load_data action=video fields=pic,videolink,title output=videos infonum=4 order=2 titlelen=100 cache=40}-->
         <!--{foreach from=$videos key=key item=video}-->
             <!--{if $key%2 == 0}-->
                 <div class="row">

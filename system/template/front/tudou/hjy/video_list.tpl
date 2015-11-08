@@ -1,4 +1,4 @@
-{include file="header_preprepend.tpl"}
+﻿{include file="header_preprepend.tpl"}
 <title>WWE视频列表 - WWE美国职业摔角 - WWE狂野角斗士</title>
 <meta name="Keywords" content="wwe最新赛事全集在线观看,wwe美国职业摔角,女子摔角,wwe中文字幕解说版" />
 <meta name="description" content="专业提供WWE美国职业摔角_中文解说,国语配音,官方解说,女子撕衣,经典赛事,综合赛事格斗等(PPV、RAW、SmackDown、Main Event 、SaturdayMorningSlam、NXT、SuperStars、ECW、TNA)视频高清晰在线观看" />
@@ -13,9 +13,9 @@
 
 <div class="container-fluid">
     <!--{if $cid == 0}-->
-        <!--{poc_load_data action=video output=videos,multipage infonum=10 page=1 titlelen=48 order=$order cache=40}-->
+        <!--{poc_load_data action=video output=videos,multipage infonum=10 page=1 titlelen=200 order=$order cache=40}-->
     <!--{else}-->
-        <!--{poc_load_data action=video output=videos,multipage infonum=10 type=channel id=$cid page=1 titlelen=48 order=$order cache=40}-->
+        <!--{poc_load_data action=video output=videos,multipage infonum=10 type=channel id=$cid page=1 titlelen=200 order=$order cache=40}-->
     <!--{/if}-->
     <!--{foreach from=$videos key=key item=video}-->
         <!--{if $key%2 == 0}-->
