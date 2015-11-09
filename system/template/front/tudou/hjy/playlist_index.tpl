@@ -1,4 +1,4 @@
-﻿{include file="header_preprepend.tpl"}
+{include file="header_preprepend.tpl"}
 <title>WWE专辑列表 - WWE美国职业摔角 - WWE狂野角斗士</title>
 <meta name="Keywords" content="wwe专辑,摔角专辑,WWE最新赛事" />
 <meta name="description" content="专业提供WWE美国职业摔角_中文解说,国语配音,官方解说,女子撕衣,经典赛事,综合赛事格斗等(PPV、RAW、SmackDown、Main Event 、SaturdayMorningSlam、NXT、SuperStars、ECW、TNA)专辑高清晰在线观看" />

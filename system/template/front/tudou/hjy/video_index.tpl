@@ -32,7 +32,7 @@
     </div>
 </div>
 
-
+<!--{if $series}-->
 <div class="panel panel-default hidden" id="J-videoPlayList">
     <div class="panel-heading">
         <h3 class="panel-title">播放列表</h3>
@@ -43,6 +43,7 @@
         </div>
     </div>
 </div>
+<!--{/if}-->
 
 <div class="panel panel-default hidden videoSrcs" id="J-videoSrcs">
     <div class="panel-heading">
@@ -64,5 +65,5 @@
     </div>
 </div>
                 
-<script src="/s/js/video.js?t=20151101"></script>
+<script src="/s/js/video.js?t=20151108"></script>
 {include file="footer.tpl"}

@@ -1,4 +1,4 @@
-﻿</head>
+</head>
 <body>
   <nav class="navbar navbar-default navbar-static-top c-navbar-top">
     <div class="container-fluid">

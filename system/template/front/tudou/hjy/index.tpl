@@ -1,4 +1,4 @@
-﻿{include file="header_preprepend.tpl"}
+{include file="header_preprepend.tpl"}
 <title>{$site_name}</title>
 <meta name="Keywords" content="{$site_keyword}" />
 <meta name="description" content="{$site_description}" />
