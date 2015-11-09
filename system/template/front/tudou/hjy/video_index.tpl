@@ -27,12 +27,11 @@
     </div>
     <div class="panel-body">
     <p>发布: <em>{$video_info.date}</em></p>
-    <p>栏目: <a href="{poc_url url=channel/view/`$video_info.cid`}">{$video_info.cname}</a></p>
+    <p>栏目: <a href="{poc_url url=video/show/cid/`$video_info.cid`}">{$video_info.cname}</a></p>
     {$video_info.description}
     </div>
 </div>
 
-<!--{if $series}-->
 <div class="panel panel-default hidden" id="J-videoPlayList">
     <div class="panel-heading">
         <h3 class="panel-title">播放列表</h3>
@@ -43,7 +42,6 @@
         </div>
     </div>
 </div>
-<!--{/if}-->
 
 <div class="panel panel-default hidden videoSrcs" id="J-videoSrcs">
     <div class="panel-heading">

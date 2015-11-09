@@ -24,7 +24,6 @@ system/Engline.php
 system/uc_config.inc.php
 system/template/admin/
 system/template/front/default/
-system/template/share/
 system/template/sitemap/
 admin.php
 crossdomain.xml
