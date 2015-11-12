@@ -37,7 +37,7 @@
                     {$video.pic|thumbnail_render}
                 </a>
                 <div class="caption">
-                    <p><a href="{$video.videolink}">{$video.stitle}</a></p>
+                    <p><a href="{poc_url url=video/index/$video.vid/series/1/plid/$plid}">{$video.stitle}</a></p>
                 </div>
             </div>
         </div>

@@ -15,7 +15,7 @@
     </div>
 </div>
 
-<!--{poc_special fields=title,date,videolink,pic,date,duration id=$sid order=2 type=video group=default output=videos cache=40}-->
+<!--{poc_special fields=cname,title,videolink,pic id=$sid order=2 type=video group=default output=videos}-->
 <!--{if $videos}-->
     <div class="panel panel-default">
         <div class="panel-heading">
@@ -32,7 +32,7 @@
                             {$video.pic|thumbnail_render}
                         </a>
                         <div class="caption">
-                            <p><a href="{$video.videolink}">{$playlist.title}</a></p>
+                            <p><a href="{$video.videolink}">{$video.title}</a></p>
                         </div>
                     </div>
                 </div>

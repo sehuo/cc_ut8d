@@ -45,7 +45,9 @@
                     <a href="{$video.videolink}">
                         {$video.pic|thumbnail_render}
                     </a>
-                    <a class="caption" href="{$video.videolink}">{$video.stitle}</a>
+                    <div class="caption">
+                        <a href="{$video.videolink}">{$video.stitle}</a>
+                    </div>
                 </div>
             </div>
             <!--{if $key%2 == 1}-->

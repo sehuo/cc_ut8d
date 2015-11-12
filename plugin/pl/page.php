@@ -88,8 +88,12 @@ class SubPages{
 		$subPageCss2Str = "";
 		$sep = '<span>..</span>';
 
+		// if($aLen && $a[0] != 1){
+		// 	$subPageCss2Str .= "<a data-url='".$this->subPage_link."&p=1' href='".$this->subPage_link."#1' class='J_pagea'>1</a>".$sep;
+		// }
+
 		if($aLen && $a[0] != 1){
-			$subPageCss2Str .= "<a data-url='".$this->subPage_link."&p=1' href='".$this->subPage_link."#1' class='J_pagea'>1</a>".$sep;
+			$subPageCss2Str .= $sep;
 		}
 
 		
@@ -105,8 +109,11 @@ class SubPages{
 
 
 		if($aLen && $a[$aLen-1] != $this->pageNums){
-			$subPageCss2Str .= $sep."<a class='J_pagea' data-url='".$this->subPage_link."&p=".$this->pageNums."' href='#'>$this->pageNums</a>";
+			$subPageCss2Str .= $sep;
 		}
+		// if($aLen && $a[$aLen-1] != $this->pageNums){
+		// 	$subPageCss2Str .= $sep."<a class='J_pagea' data-url='".$this->subPage_link."&p=".$this->pageNums."' href='#'>$this->pageNums</a>";
+		// }
 		  
 		$this->html =  $subPageCss2Str;  
 	}  
